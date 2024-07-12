@@ -110,11 +110,18 @@ class Raport {
             data.addRow([label, proc, proc + '%']);
         }
 
+        const options = Object.assign({ title: loc.nume}, this.#defaultOptions);
         const chart = new google.visualization.ColumnChart(document.getElementById('distrib' + idx));
-        chart.draw(data, this.#defaultOptions);
+        chart.draw(data, options);
     }
 
+}
 
+
+function changeYear(year){
+    raport.load(year);
+    document.getElementById('nav' + year).className = 'active';
+    document.getElementById('nav' + (year == 2024 ? 2023 : 2024)).className = '';
 }
 
 /**
