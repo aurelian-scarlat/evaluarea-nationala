@@ -1,6 +1,6 @@
 class Raport {
 
-    #path = '/parser/#/raport.json';
+    #path = 'parser/#/raport.json';
     #raport = {};
     #defaultOptions = {
       vAxis: { minValue: 0, maxValue: 10 },
