@@ -94,7 +94,7 @@ class Raport {
     drawDistrib(){
         document.getElementById('distrib').innerHTML = '';
         this.#locuri.forEach((loc, i) => {
-            document.getElementById('distrib').innerHTML += '<div id="distrib' + i +'" class="chart"></div><br>';
+            document.getElementById('distrib').insertAdjacentHTML('beforeend', '<div id="distrib' + i +'" class="chart"></div><br>');
             this.drawOneDistrib(this.#raport[loc], i);
         });
     }
