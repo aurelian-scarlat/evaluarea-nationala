@@ -10,6 +10,21 @@
   <style>
     .chart{
       min-height: 325px;
+      border-bottom: 1px #bfe2ff solid;
+      padding-bottom: 2rem;
+    }
+    @media only screen and (max-width: 600px) {
+      nav .brand-logo.center {
+        left: 5%;
+        transform: none;
+        font-size: 1.8rem;
+      }
+    }
+    h4, p {
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 0;
     }
   </style>
   <!-- Google Charts -->
@@ -17,45 +32,53 @@
   <script type="text/javascript" src="script.js"></script>
 </head>
 
-<body class="blue-grey darken-4">
+<body>
 
-  <nav class="navbar-fixed blue-grey darken-3">
-    <div class="nav-wrapper">
-      <div class="brand-logo center blue-text text-lighten-4">Evaluarea Națională</div>
-      <ul class="right">
-        <li id="nav2024" class="active"><a href="javascript:changeYear(2024)">2024</a></li>
-        <li id="nav2023"><a href="javascript:changeYear(2023)">2023</a></li>
-    </ul>
-    </div>
-  </nav>
+  <div class="navbar-fixed">
+    <nav class="blue-grey darken-3">
+      <div class="nav-wrapper">
+        <div class="brand-logo center blue-text text-lighten-4">Evaluarea Națională</div>
+        <ul class="right">
+          <li id="nav2024" class="active"><a href="javascript:changeYear(2024)">2024</a></li>
+          <li id="nav2023"><a href="javascript:changeYear(2023)">2023</a></li>
+      </ul>
+      </div>
+    </nav>
+  </div>
 
   <div class="container">
-    <h3 class="deep-orange-text text-lighten-2">Graficul mediilor</h3>
+    <h4 class="deep-orange-text text-lighten-1">Graficul mediilor</h4>
+    <p class="grey-text text-darken-1">Media aritmetică a fiecărei entități selectate.</p>
     <div id="med" class="chart"></div>
   </div>
 
   <div class="container">
-    <h3 class="deep-orange-text text-lighten-2">Graficul primilor 10%</h3>
+    <h4 class="deep-orange-text text-lighten-2">Graficul primilor 10%</h4>
+    <p class="grey-text text-darken-1">Din fiecare entitate am luat primii 10% clasați, iar pentru ei am calculat media lor și cea mai mică notă obținută.</p>
     <div id="top10" class="chart"></div>
   </div>
 
   <div class="container">
-    <h3 class="deep-orange-text text-lighten-2">Graficul primilor 25%</h3>
+    <h4 class="deep-orange-text text-lighten-2">Graficul primilor 25%</h4>
+    <p class="grey-text text-darken-1">Din fiecare entitate am luat primii 25% clasați, iar pentru ei am calculat media lor și cea mai mică notă obținută.</p>
     <div id="top25" class="chart"></div>
   </div>
 
   <div class="container">
-    <h3 class="deep-orange-text text-lighten-2">Graficul primilor 50%</h3>
+    <h4 class="deep-orange-text text-lighten-2">Graficul primilor 50%</h4>
+    <p class="grey-text text-darken-1">Din fiecare entitate am luat primii 50% clasați, iar pentru ei am calculat media lor și cea mai mică notă obținută.</p>
     <div id="top50" class="chart"></div>
   </div>
 
   <div class="container">
-    <h3 class="deep-orange-text text-lighten-2">Distribuția notelor</h3>
+    <h4 class="deep-orange-text text-lighten-2">Distribuția notelor</h4>
+    <p class="grey-text text-darken-1">Pentru fiecare entitate selectată am calculat câte note (procentual) sunt în fiecare interval din jurul unui punct de notă.</p>
     <div id="distrib"></div>
   </div>
 
   <div class="container">
-    <h3 class="deep-orange-text text-lighten-2">Graficul prezenței</h3>
+    <h4 class="deep-orange-text text-lighten-2">Graficul prezenței</h4>
+    <p class="grey-text text-darken-1">Pentru fiecare entitate selectată am calculat prezența la examen, ca raport dintre cei prezenți și cei înscriși.</p>
     <div id="prez" class="chart"></div>
   </div>
 
